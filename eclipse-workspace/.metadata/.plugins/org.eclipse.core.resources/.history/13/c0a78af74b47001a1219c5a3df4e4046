@@ -1,0 +1,5 @@
+package com.capgemini.javafullstack.collection.set;
+
+public class Student {
+
+}

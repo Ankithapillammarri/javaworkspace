@@ -1,0 +1,35 @@
+package com.capgemini.javafullstack.collection.set;
+
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.TreeSet;
+
+public class TestProduct {
+	public static void main(String[] args) {
+		
+		TreeSet<Product> ts=new TreeSet<Product>();
+		
+		Product p1=new Product(1, "car", 1000);
+		Product p2=new Product(2, "Tv", 4000);
+		Product p3=new Product(3, "mobile", 5000);
+		Product p4=new Product(4, "projector", 7000);
+		
+		ts.add(p1);
+		ts.add(p2);
+		ts.add(p3);
+		ts.add(p4);
+		
+	
+		
+		Iterator<Product> it=ts.iterator();
+		while(it.hasNext()) {
+			Product p=it.next();
+			System.out.println(p.id);
+			System.out.println(p.name);
+			System.out.println(p.price);
+			System.out.println("-------------");
+		}
+		
+	}
+}

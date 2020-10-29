@@ -1,0 +1,46 @@
+import java.util.HashSet;
+
+public class Example1 {
+	static HashSet<String> set = new HashSet<String>();
+	public static void main(String[] args) {
+
+	String current ="";
+
+	p("rrlrlr");
+	System.out.println(set);
+	}
+
+
+	public static void p(String input){
+
+	for(int i=0;i<input.length();i++)
+	{
+
+	StringBuilder in=new StringBuilder(input);
+	in.deleteCharAt(i);
+	String inStr=in.toString();
+	if(isValidMove(inStr))
+	set.add(inStr);
+
+	p(inStr);
+	}
+
+	}
+	private static boolean isValidMove(String c) {
+
+	int dest=1;
+	int v=0;
+	for( int i=0; i< c.length();i++)
+	{
+	if(c.charAt(i)=='r')
+	v++;
+	else
+	v--;//l char
+	}
+
+	if(dest==v)
+	return true;
+
+	return false;
+	}
+}

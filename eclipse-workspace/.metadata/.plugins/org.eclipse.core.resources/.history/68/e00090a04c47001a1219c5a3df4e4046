@@ -1,0 +1,15 @@
+package com.capgemini.javafullstack.collection.set;
+
+import java.util.TreeSet;
+
+public class TestStudent {
+	public static void main(String[] args) {
+		
+		TreeSet<Student> ts=new  TreeSet<Student>();
+		Student s1=new Student(2, "anki", 87.9);
+		Student s2=new Student(3, "nikki", 56.9);
+		Student s3=new Student(6, "pranu", 45.9);
+		Student s4=new Student(5, "deepu", 76.9);
+		
+	}
+}

@@ -1,0 +1,26 @@
+package com.capgemini.javafullstack.collection.set;
+
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+public class TestH {
+	public static void main(String[] args) {
+		
+		LinkedHashSet<Double> lhs=new LinkedHashSet<Double>();
+		lhs.add(2.4);
+		lhs.add(3.4);
+		lhs.add(5.6);
+		lhs.add(9.8);
+		
+		System.out.println("******Using for-each*******");
+		for(Double r:lhs) {
+			System.out.println(r);
+		}
+		System.out.println("******Using Iterator*****");
+		Iterator<Double> it=lhs.iterator();
+		while(it.hasNext()) {
+			Double r=it.next();
+			System.out.println(r);
+		}
+	}
+}

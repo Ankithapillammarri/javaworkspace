@@ -1,0 +1,13 @@
+package com.capgemini.javafullstack.collection.set;
+
+import java.util.LinkedHashSet;
+
+public class TestH {
+	public static void main(String[] args) {
+		
+		LinkedHashSet<Double> lhs=new LinkedHashSet<Double>();
+		lhs.add(2.4);
+		lhs.add(3.4);
+		lhs.add()
+	}
+}

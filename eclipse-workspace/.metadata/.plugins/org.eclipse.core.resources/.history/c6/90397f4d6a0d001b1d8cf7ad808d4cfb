@@ -1,0 +1,40 @@
+import java.util.Arrays;
+
+public class Example {
+	static int get_subset_count(int arr[], int K, int N) {
+
+// Sorting the array 
+		Arrays.sort(arr);
+
+		int left, right;
+		left = 0;
+		right = N - 1;
+
+// ans stores total number 
+// of subsets 
+		int ans = 0;
+
+		while (left <= right) {
+			if (arr[left] + arr[right] <= K) {
+
+// Add all posible subsets 
+// between i and j 
+				ans += 1 << (right - left);
+				left++;
+			} else {
+
+// Decrease the sum 
+				right--;
+			}
+		}
+		return ans;
+	}
+
+	public static void main(String[] args) {
+		int arr[] = { 2, 4, 5, 7 };
+		int K = 8;
+		int N = arr.length;
+
+		System.out.print(get_subset_count(arr, K, N));
+	}
+}
